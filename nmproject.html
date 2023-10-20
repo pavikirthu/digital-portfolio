@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <p><img src="kir.jpg" wight="100px" height="160px"></p>
+        <h1>R.PAVITHRA</h1>
+        <p>Web Developer | Designer</p>
+    </header>
+    <nav>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skils">Skils</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+            
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p> I'm Pavithra, a passionate student, web developer, and designer on a creative journey to bring digital ideas to life.  </p>
+    </section>
+    <section id="Skils">
+        <h2>Skils</h2>
+        <ul>
+        <li><p>HDML</p></li></ul>
+        <ul>
+        <li><P>CSS</P></li></ul>
+        <ul>
+        <li><p>JavaScript</p></li></ul></section>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="project1.jpeg">project1</a></li></ul>
+        <ul>
+            <li><a href="project2.jpeg">project2</a></li></ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email Id:pavithra1471@email.com</p>
+        <p>Adderss :4/50 Avinashi,Thirupur</p>
+        <p>Phone no:1234567890</p>
+    </section>
+    <script>
+        // Add your JavaScript code here
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = 
+
+document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>   
